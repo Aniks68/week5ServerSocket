@@ -26,10 +26,7 @@ public class Server {
             String request = requestBuilder.toString();
             String[] requestsLines = request.split("\r\n");
             String[] requestLine = requestsLines[0].split(" ");
-//            String method = requestLine[0];
             String path = requestLine[1];
-//            String version = requestLine[2];
-//            String host = requestsLines[1].split(" ")[1];
 
 
             Path htmlPath = myServer.getFilePath("src/main/resources/index.html");
