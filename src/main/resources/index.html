@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Periodic Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+body{
+
+    font-family: 'Irish Grover', sans-serif;
+    text-align: center;
+    width: 100%;
+    background: rgb(154, 192, 192);
+    padding-left: 50px;
+}
+header {
+    max-width: 100%;
+    height: 15%;
+    border: 1px solid #e7e3c1;
+    color: black;
+    margin: -10px -10px 0 -10px;
+}
+
+header h1 {
+    font-family: 'Irish Grover', cursive;
+    font-size: xx-large;
+}
+
+#content{
+    position: relative;
+    display: grid;
+    width: 95%;
+    height: 75%;
+    grid-template-columns:repeat(18, 1fr);
+    grid-template-rows: repeat(8,1fr) 1fr;
+}
+
+div#content {
+    /* grid-gap: 2px; */
+}
+
+.items{
+    margin-left: 0;
+    padding: 15px;
+    height: 45px;
+    width: 45px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    margin-bottom: -5px;
+    margin-top: -5px;
+}
+
+
+
+.items div:nth-child(odd){
+    position: absolute;
+    vertical-align: super;
+    padding: 0;
+    margin: 0 -2 auto 0;
+    top: 0;
+    left: 0;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: start;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.items div:nth-child(even){
+    position:absolute;
+    bottom: 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: x-large;
+    font-weight: 700;
+}
+
+
+.one{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.two{
+    grid-column: 18/19;
+    grid-row: 1/2;
+}
+.three{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.four{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.five{
+    grid-column: 13/14;
+    grid-row: 2/3;
+}
+
+.six{
+    grid-column: 14/15;
+    grid-row: 2/3;
+}
+
+.seven{
+    grid-column: 15/16;
+    grid-row: 2/3;
+}
+
+.eight{
+    grid-column: 16/17;
+    grid-row: 2/3;
+}
+.nine{
+    grid-column: 17/18;
+    grid-row: 2/3;
+}
+.ten{
+    grid-column: 18;
+    grid-row: 2/3;
+}
+.eleven{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+.twelve{
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.thirteen{
+    grid-column: 13/14;
+    grid-row: 3/4;
+}
+
+.fourteen{
+    grid-column: 14/15;
+    grid-row: 3/4;
+}
+
+.fifteen{
+    grid-column: 15/16;
+    grid-row: 3/4;
+}
+
+.sixteen{
+    grid-column: 16/17;
+    grid-row: 3/4;
+}
+
+.seventeen{
+    grid-column: 17/18;
+    grid-row: 3/4;
+}
+
+.eighteen{
+    grid-column: 18;
+    grid-row: 3/4;
+}
+.nineteen{
+    grid-row:4/5;
+    grid-column: 1/2;
+}
+
+.twenty{
+    grid-row:4/5;
+    grid-column: 2/3;
+}
+
+.twenty-one{
+    grid-row:4/5;
+    grid-column: 3/4;
+}
+
+.twenty-two{
+    grid-row:4/5;
+    grid-column: 4/5;
+}
+
+.twenty-three{
+    grid-row:4/5;
+    grid-column: 5/6;
+}
+
+.twenty-four{
+    grid-row:4/5;
+    grid-column: 6/7;
+}
+
+.twenty-five{
+    grid-row:4/5;
+    grid-column: 7/8;
+}
+
+.twenty-six{
+    grid-row:4/5;
+    grid-column: 8/9;
+}
+
+.twenty-seven{
+    grid-row:4/5;
+    grid-column: 9/10;
+}
+
+.twenty-eight{
+    grid-row:4/5;
+    grid-column: 10/11;
+}
+
+.twenty-nine{
+    grid-row:4/5;
+    grid-column: 11/12;
+}
+
+.thirty{
+    grid-row:4/5;
+    grid-column: 12/13;
+}
+
+.thirty-one{
+    grid-row:4/5;
+    grid-column: 13/14;
+}
+
+.thirty-two{
+    grid-row:4/5;
+    grid-column: 14/15;
+}
+
+.thirty-three{
+    grid-row:4/5;
+    grid-column: 15/16;
+}
+
+.thirty-four{
+    grid-row:4/5;
+    grid-column: 16/17;
+}
+
+.thirty-five{
+    grid-row:4/5;
+    grid-column: 17/18;
+}
+
+.thirty-six{
+    grid-row:4/5;
+    grid-column: 18;
+}
+
+
+.thirty-seven{
+    grid-row:5/6;
+    grid-column: 1/2;
+}
+
+.thirty-eight{
+        grid-row:5/6;
+        grid-column: 2/3;
+}
+
+.thirty-nine{
+    grid-row:5/6;
+    grid-column: 3/4;
+}
+
+.forty{
+    grid-row: 5/6;
+    grid-column: 4/5;
+}
+
+.forty-one{
+    grid-row: 5/6;
+    grid-column: 5/6;
+}
+
+.forty-two{
+    grid-row: 5/6;
+    grid-column: 6/7;
+}
+
+.forty-three{
+    grid-row: 5/6;
+    grid-column: 7/8;
+}
+
+.forty-four{
+    grid-row: 5/6;
+    grid-column: 8/9;
+}
+
+.forty-five{
+    grid-row: 5/6;
+    grid-column: 9/10;
+}
+
+.forty-six{
+    grid-row: 5/6;
+    grid-column: 10/11;
+}
+
+.forty-seven{
+    grid-row: 5/6;
+    grid-column: 11/12;
+}
+
+.forty-eight{
+    grid-row: 5/6;
+    grid-column: 12/13;
+}
+
+.forty-nine{
+    grid-row: 5/6;
+    grid-column: 13/14;
+}
+
+.fifty{
+    grid-row: 5/6;
+    grid-column: 14/15;
+}
+
+.fifty-one{
+    grid-row: 5/6;
+    grid-column: 15/16;
+}
+
+.fifty-two{
+    grid-row: 5/6;
+    grid-column: 16/17;
+}
+
+.fifty-three{
+    grid-row: 5/6;
+    grid-column: 17/18;
+}
+
+.fifty-four{
+    grid-row: 5/6;
+    grid-column: 18;
+}
+
+
+.fifty-five{
+    grid-row: 6/7;
+    grid-column: 1/2;
+}
+
+.fifty-six{
+        grid-row: 6/7;
+        grid-column: 2/3;
+}
+
+.fifty-seven{
+    grid-row: 6/7;
+    grid-column: 3/4;
+}
+
+.fifty-eight{
+    grid-row: 8/9;
+    grid-column: 4/5;
+}
+
+.fifty-nine{
+    grid-row: 8/9;
+    grid-column: 5/6;
+}
+
+.sixty{
+    grid-row: 8/9;
+    grid-column: 6/7;
+}
+
+.sixty-one{
+    grid-row: 8/9;
+    grid-column: 7/8;
+}
+
+.sixty-two{
+    grid-row: 8/9;
+    grid-column: 8/9;
+}
+.sixty-three{
+    grid-row: 8/9;
+    grid-column: 9/10;
+}
+
+.sixty-four{
+    grid-row: 8/9;
+    grid-column: 10/11;
+}
+
+.sixty-five{
+    grid-row: 8/9;
+    grid-column: 11/12;
+}
+
+.sixty-six{
+    grid-row: 8/9;
+    grid-column: 12/13;
+}
+
+.sixty-seven{
+    grid-row: 8/9;
+    grid-column: 13/14;
+}
+
+.sixty-eight{
+    grid-row: 8/9;
+    grid-column: 14/15;
+}
+
+.sixty-nine{
+    grid-row: 8/9;
+    grid-column: 15/16;
+}
+
+.seventy{
+    grid-row: 8/9;
+    grid-column: 16/17;
+}
+
+.seventy-one{
+    grid-row: 8/9;
+    grid-column: 17/18;
+}
+
+
+.seventy-two{
+    grid-row: 6/7;
+    grid-column: 4/5;
+}
+
+.seventy-three{
+    grid-row: 6/7;
+    grid-column: 5/6;
+}
+
+.seventy-four{
+    grid-row: 6/7;
+    grid-column: 6/7;
+}
+
+.seventy-five{
+    grid-row: 6/7;
+    grid-column: 7/8;
+}
+
+.seventy-six{
+    grid-row: 6/7;
+    grid-column: 8/9;
+}
+
+.seventy-seven{
+    grid-row: 6/7;
+    grid-column: 9/10;
+}
+
+.seventy-eight{
+    grid-row: 6/7;
+    grid-column: 10/11;
+}
+
+.seventy-nine{
+    grid-row: 6/7;
+    grid-column: 11/12;
+}
+
+.eighty{
+    grid-row: 6/7;
+    grid-column: 12/13;
+}
+
+.eighty-one{
+    grid-row: 6/7;
+    grid-column: 13/14;
+}
+
+.eighty-two{
+    grid-row: 6/7;
+    grid-column: 14/15;
+}
+
+.eighty-three{
+    grid-row: 6/7;
+    grid-column: 15/16;
+}
+
+.eighty-four{
+    grid-row: 6/7;
+    grid-column: 16/17;
+}
+
+.eighty-five{
+    grid-row: 6/7;
+    grid-column: 17/18;
+}
+
+.eighty-six{
+    grid-row: 6/7;
+    grid-column: 18;
+}
+
+.eighty-seven{
+    grid-row: 7/8;
+    grid-column: 1/2;
+}
+
+.eighty-eight{
+    grid-row: 7/8;
+    grid-column: 2/3;
+}
+
+.eighty-nine{
+    grid-row: 7/8;
+    grid-column: 3/4;
+}
+
+
+.ninety{
+    grid-row: 9/10;
+    grid-column: 4/5;
+}
+
+.ninety-one{
+    grid-row: 9/10;
+    grid-column: 5/6;
+}
+
+.ninety-two{
+    grid-row: 9/10;
+    grid-column: 6/7;
+}
+
+.ninety-three{
+    grid-row: 9/10;
+    grid-column: 7/8;
+}
+
+.ninety-four{
+    grid-row: 9/10;
+    grid-column: 8/9;
+}
+.ninety-five{
+    grid-row: 9/10;
+    grid-column: 9/10;
+}
+
+.ninety-six{
+    grid-row: 9/10;
+    grid-column: 10/11;
+}
+
+.ninety-seven{
+    grid-row: 9/10;
+    grid-column: 11/12;
+}
+
+.ninety-eight{
+    grid-row: 9/10;
+    grid-column: 12/13;
+}
+
+.ninety-nine{
+    grid-row: 9/10;
+    grid-column: 13/14;
+}
+
+.hundred{
+    grid-row: 9/10;
+    grid-column: 14/15;
+}
+
+.hundred-one{
+    grid-row: 9/10;
+    grid-column: 15/16;
+}
+
+.hundred-two{
+    grid-row: 9/10;
+    grid-column: 16/17;
+}
+
+.hundred-three{
+    grid-row: 9/10;
+    grid-column: 17/18;
+}
+
+.hundred-four{
+    grid-row: 7/8;
+    grid-column: 4/5;
+}
+
+.hundred-five{
+    grid-row: 7/8;
+    grid-column: 5/6;
+}
+
+.hundred-six{
+    grid-row: 7/8;
+    grid-column: 6/7;
+}
+
+.hundred-seven{
+    grid-row: 7/8;
+    grid-column: 7/8;
+}
+
+.hundred-eight{
+    grid-row: 7/8;
+    grid-column: 8/9;
+}
+
+.hundred-nine{
+    grid-row: 7/8;
+    grid-column: 9/10;
+}
+
+.hundred-ten{
+    grid-row: 7/8;
+    grid-column: 10/11;
+}
+
+.hundred-eleven{
+    grid-row: 7/8;
+    grid-column: 11/12;
+}
+
+.hundred-twelve{
+    grid-row: 7/8;
+    grid-column: 12/13;
+}
+
+.hundred-thirteen{
+    grid-row: 7/8;
+    grid-column: 13/14;
+}
+
+.hundred-fourteen{
+    grid-row: 7/8;
+    grid-column: 14/15;
+}
+
+.hundred-fifteen{
+    grid-row: 7/8;
+    grid-column: 15/16;
+}
+
+.hundred-sixteen{
+    grid-row: 7/8;
+    grid-column: 16/17;
+}
+
+.hundred-seventeen{
+    grid-row: 7/8;
+    grid-column: 17/18;
+}
+
+.hundred-eighteen{
+    grid-row: 7/8;
+    grid-column: 18;
+}
+
+
+
+.alkaline-earth-metals{
+    background: rgb(73, 67, 67);
+}
+
+.akaline-metals{
+    background: grey;
+}
+.transition{
+    background: #5b5861;
+}
+
+.other-metals{
+    background: #554245;
+}
+
+.other-nonmetals{
+    background: skyblue;
+}
+
+.hallogens{
+    background: #314632;
+}
+
+.noble-gas{
+    background: rgb(88, 62, 88);
+}
+
+.actinoids{
+    background: #b3e5fc;
+}
+
+.rare{
+    background: rgb(87, 117, 136);
+}
+
+.row-eight{
+    margin-top: 20px;
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+            <h1>
+                PERIODIC TABLE OF ELEMENTS
+            </h1>
+        
+    </header>
+    
+    <div id="content">
+        <div class="one items other-nonmetals">
+            <div>1</div>
+            <div>H</div>
+        </div>
+        
+        <div class="items two noble-gas">
+            <div>2</div>
+            <div>He</div>
+        </div>
+
+        <div class="three items akaline-metals">
+            <div>3</div>
+            <div>Li</div>
+        </div>
+
+        <div class="four items alkaline-earth-metals">
+            <div>4</div>
+            <div>Be</div>
+        </div>
+
+        <div class="five items other-nonmetals">
+            <div>5</div>
+            <div>B</div>
+        </div>
+        <div class="items six other-nonmetals">
+            <div>6</div>
+            <div>C</div>
+        </div>
+        <div class="items seven other-nonmetals">
+            <div>7</div>
+            <div>N</div>
+        </div>
+        <div class="items eight other-nonmetals">
+            <div>8</div>
+            <div>H</div>
+        </div>
+        <div class="items nine hallogens">
+            <div>9</div>
+            <div>F</div>
+        </div>
+        <div class="items ten noble-gas">
+            <div>10</div>
+            <div>Ne</div>
+        </div>
+        <div class="items eleven akaline-metals">
+            <div>11</div>
+            <div>Na</div>
+        </div>
+        <div class="items twelve alkaline-earth-metals">
+            <div>12</div>
+            <div>Mg</div>
+        </div>
+        <div class="items thirteen other-metals">
+            <div>13</div>
+            <div>Al</div>
+        </div>
+        <div class="items fourteen other-nonmetals">
+            <div>14</div>
+            <div>Si</div>
+        </div>
+        <div class="items fifteen other-nonmetals">
+            <div>15</div>
+            <div>P</div>
+        </div>
+        <div class="items sixteen other-nonmetals">
+            <div>16</div>
+            <div>S</div>
+        </div>
+        <div class="items seventeen hallogens">
+            <div>17</div>
+            <div>Cl</div>
+        </div>
+        <div class="items eighteen noble-gas">
+            <div>18</div>
+            <div>Ar</div>
+        </div>
+        <div class="items nineteen akaline-metals">
+            <div>19</div>
+            <div>K</div>
+        </div>
+        <div class="items twenty alkaline-earth-metals">
+            <div>20</div>
+            <div>Ca</div>
+        </div>
+        <div class="items twenty-one rare">
+            <div>21</div>
+            <div>Sc</div>
+        </div>
+        <div class="items twenty-two transition">
+            <div>22</div>
+            <div>Ti</div>
+        </div>
+        <div class="items twenty-three transition">
+            <div>23</div>
+            <div>V</div>
+        </div>
+        <div class="items twenty-four transition">
+            <div>24</div>
+            <div>Cr</div>
+        </div>
+        <div class="items twenty-five transition">
+            <div>25</div>
+            <div>Mn</div>
+        </div>
+        <div class="items twenty-six transition">
+            <div>26</div>
+            <div>Fe</div>
+        </div>
+        <div class="items twenty-seven transition">
+            <div>27</div>
+            <div>Co</div>
+        </div>
+        <div class="items twenty-eight transition">
+            <div>28</div>
+            <div>Ni</div>
+        </div>
+        <div class="items twenty-nine transition">
+            <div>29</div>
+            <div>Cu</div>
+        </div>
+        <div class="items thirty transition">
+            <div>30</div>
+            <div>Zn</div>
+        </div>
+        <div class="items thirty-one other-metals">
+            <div>31</div>
+            <div>Ga</div>
+        </div>
+        <div class="items thirty-two other-metals">
+            <div>32</div>
+            <div>Ge</div>
+        </div>
+        <div class="items thirty-three other-nonmetals">
+            <div>33</div>
+            <div>As</div>
+        </div>
+        <div class="items thirty-four other-nonmetals">
+            <div>34</div>
+            <div>Se</div>
+        </div>
+        <div class="items thirty-five hallogens">
+            <div>35</div>
+            <div>Br</div>
+        </div>
+        <div class="items thirty-six noble-gas">
+            <div>36</div>
+            <div>Kr</div>
+        </div>
+        <div class="items thirty-seven akaline-metals">
+            <div>37</div>
+            <div>Rb</div>
+        </div>
+        <div class="items thirty-eight alkaline-earth-metals">
+            <div>38</div>
+            <div>Sr</div>
+        </div>
+        <div class="items thirty-nine rare">
+            <div>39</div>
+            <div>Y</div>
+        </div>
+        <div class="items forty transition">
+            <div>40</div>
+            <div>Zr</div>
+        </div>
+        <div class="items forty-one transition">
+            <div>41</div>
+            <div>Nb</div>
+        </div>
+        <div class="items forty-two transition">
+            <div>42</div>
+            <div>Mo</div>
+        </div>
+        <div class="items forty-three transition">
+            <div>43</div>
+            <div>Tc</div>
+        </div>
+        <div class="items forty-four transition">
+            <div>44</div>
+            <div>Ru</div>
+        </div>
+        <div class="items forty-five transition">
+            <div>45</div>
+            <div>Rh</div>
+        </div>
+        <div class="items forty-six transition">
+            <div>46</div>
+            <div>Pd</div>
+        </div>
+        <div class="items forty-seven transition">
+            <div>47</div>
+            <div>Ag</div>
+        </div>
+        <div class="items forty-eight transition">
+            <div>48</div>
+            <div>Cd</div>
+        </div>
+        <div class="items forty-nine other-metals">
+            <div>49</div>
+            <div>In</div>
+        </div>
+        <div class="items fifty other-metals">
+            <div>50</div>
+            <div>Sn</div>
+        </div>
+        <div class="items fifty-one other-metals">
+            <div>51</div>
+            <div>Sb</div>
+        </div>
+        <div class="items fifty-two other-nonmetals">
+            <div>52</div>
+            <div>Te</div>
+        </div>
+        <div class="items fifty-three hallogens">
+            <div>53</div>
+            <div>I</div>
+        </div>
+        <div class="items fifty-four noble-gas">
+            <div>54</div>
+            <div>Xe</div>
+        </div>
+        <div class="items fifty-five akaline-metals">
+            <div>55</div>
+            <div>Cs</div>
+        </div>
+        <div class="items fifty-six alkaline-earth-metals">
+            <div>56</div>
+            <div>Ba</div>
+        </div>
+        <div class="items fifty-seven rare">
+            <div>57</div>
+            <div>La</div>
+        </div>
+        <div class="items row-eight fifty-eight rare">
+            <div>58</div>
+            <div>Ce</div>
+        </div>
+        <div class="items row-eight fifty-nine rare">
+            <div>59</div>
+            <div>Pr</div>
+        </div>
+        <div class="items row-eight sixty rare">
+            <div>60</div>
+            <div>Nd</div>
+        </div>
+        <div class="items row-eight sixty-one rare">
+            <div>61</div>
+            <div>Pm</div>
+        </div>
+        <div class="items row-eight sixty-two rare">
+            <div>62</div>
+            <div>Sm</div>
+        </div>
+        <div class="items row-eight sixty-three rare">
+            <div>63</div>
+            <div>Eu</div>
+        </div>
+        <div class="items row-eight sixty-four rare">
+            <div>64</div>
+            <div>Gd</div>
+        </div>
+        <div class="items row-eight sixty-five rare">
+            <div>65</div>
+            <div>Tb</div>
+        </div>
+        <div class="items row-eight sixty-six rare">
+            <div>66</div>
+            <div>Dy</div>
+        </div>
+        <div class="items row-eight sixty-seven rare">
+            <div>67</div>
+            <div>Ho</div>
+        </div>
+        <div class="items row-eight sixty-eight rare">
+            <div>68</div>
+            <div>Er</div>
+        </div>
+        <div class="items row-eight sixty-nine rare">
+            <div>69</div>
+            <div>Tm</div>
+        </div>
+        <div class="items row-eight seventy rare">
+            <div>70</div>
+            <div>Yb</div>
+        </div>
+        <div class="items row-eight seventy-one rare">
+            <div>71</div>
+            <div>Lu</div>
+        </div>
+        <div class="items seventy-two transition">
+            <div>72</div>
+            <div>Hf</div>
+        </div>
+        <div class="items seventy-three transition">
+            <div>73</div>
+            <div>Ta</div>
+        </div>
+        <div class="items seventy-four transition">
+            <div>74</div>
+            <div>W</div>
+        </div>
+    
+        <div class="items seventy-five transition">
+            <div>75</div>
+            <div>Re</div>
+        </div>
+        <div class="items seventy-six transition">
+            <div>76</div>
+            <div>Os</div>
+        </div>
+        <div class="items seventy-seven transition">
+            <div>77</div>
+            <div>Ir</div>
+        </div>
+        <div class="items seventy-eight transition">
+            <div>78</div>
+            <div>Pt</div>
+        </div>
+        <div class="items seventy-nine transition">
+            <div>79</div>
+            <div>Au</div>
+        </div>
+        <div class="items eighty transition">
+            <div>80</div>
+            <div>Hg</div>
+        </div>
+        <div class="items eighty-one other-metals">
+            <div>81</div>
+            <div>Ti</div>
+        </div>
+        <div class="items eighty-two other-metals">
+            <div>82</div>
+            <div>Pb</div>
+        </div>
+        <div class="items eighty-three other-metals">
+            <div>83</div>
+            <div>Bi</div>
+        </div>
+        <div class="items eighty-four other-metals">
+            <div>84</div>
+            <div>Po</div>
+        </div>
+        <div class="items eighty-five hallogens">
+            <div>85</div>
+            <div>At</div>
+        </div>
+        <div class="items eighty-six noble-gas">
+            <div>86</div>
+            <div>Rn</div>
+        </div>
+        <div class="items eighty-seven akaline-metals">
+            <div>87</div>
+            <div>Fr</div>
+        </div>
+        <div class="items eighty-eight alkaline-earth-metals">
+            <div>88</div>
+            <div>Ra</div>
+        </div>
+        <div class="items eighty-nine actinoids">
+            <div>89</div>
+            <div>Ac</div>
+        </div>
+        <div class="items ninety actinoids">
+            <div>90</div>
+            <div>Th</div>
+        </div>
+        <div class="items ninety-one actinoids">
+            <div>91</div>
+            <div>Pa</div>
+        </div>
+        <div class="items ninety-two actinoids">
+            <div>92</div>
+            <div>U</div>
+        </div>
+        <div class="items ninety-three actinoids">
+            <div>93</div>
+            <div>Np</div>
+        </div>
+        <div class="items ninety-four actinoids">
+            <div>94</div>
+            <div>Pu</div>
+        </div>
+
+        <div class="items ninety-five actinoids">
+            <div>95</div>
+            <div>Am</div>
+        </div>
+        <div class="items ninety-six actinoids">
+            <div>96</div>
+            <div>Cm</div>
+        </div>
+        <div class="items ninety-seven actinoids">
+            <div>97</div>
+            <div>Bk</div>
+        </div>
+        <div class="items ninety-eight actinoids">
+            <div>98</div>
+            <div>Cf</div>
+        </div>
+        <div class="items ninety-nine actinoids">
+            <div>99</div>
+            <div>Es</div>
+        </div>
+        <div class="items hundred actinoids">
+            <div>100</div>
+            <div>Fm</div>
+        </div>
+        <div class="items hundred-one actinoids">
+            <div>101</div>
+            <div>Md</div>
+        </div>
+        <div class="items hundred-two actinoids">
+            <div>102</div>
+            <div>No</div>
+        </div>
+        <div class="items hundred-three actinoids">
+            <div>103</div>
+            <div>Lr</div>
+        </div>
+        <div class="items hundred-four transition">
+            <div>104</div>
+            <div>Rf</div>
+        </div>
+        <div class="items hundred-five transition">
+            <div>105</div>
+            <div>Db</div>
+        </div>
+        <div class="items hundred-six transition">
+            <div>106</div>
+            <div>Sg</div>
+        </div>
+        <div class="items hundred-seven transition">
+            <div>107</div>
+            <div>Bh</div>
+        </div>
+        <div class="items hundred-eight transition">
+            <div>108</div>
+            <div>Hs</div>
+        </div>
+        <div class="items hundred-nine transition">
+            <div>109</div>
+            <div>Mt</div>
+        </div>
+        <div class="items hundred-ten transition">
+            <div>110</div>
+            <div>Ds</div>
+        </div>
+        <div class="items hundred-eleven transition">
+            <div>111</div>
+            <div>Rg</div>
+        </div>
+        <div class="items hundred-twelve transition">
+            <div>112</div>
+            <div>Cn</div>
+        </div>
+        <div class="items hundred-thirteen other-metals">
+            <div>113</div>
+            <div>Nh</div>
+        </div>
+        <div class="items hundred-fourteen other-metals">
+            <div>114</div>
+            <div>Fl</div>
+        </div>
+        <div class="items hundred-fifteen other-metals">
+            <div>115</div>
+            <div>Mc</div>
+        </div>
+        <div class="items hundred-sixteen other-metals">
+            <div>116</div>
+            <div>Lv</div>
+        </div>
+
+        <div class="items hundred-seventeen hallogens">
+            <div>117</div>
+            <div>Ts</div>
+        </div>
+
+        <div class="items hundred-eighteen noble-gas">
+            <div>118</div>
+            <div>Og</div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -11,7 +11,7 @@ import java.nio.file.Path;
 public class Server {
     public static void main(String[] args) throws IOException {
         serverServicesImpl myServer = new serverServicesImpl();
-        int port = 6565;
+        int port = 6560;
         ServerSocket server = new ServerSocket(port);
 
         while(server != null) {
@@ -26,23 +26,23 @@ public class Server {
             String request = requestBuilder.toString();
             String[] requestsLines = request.split("\r\n");
             String[] requestLine = requestsLines[0].split(" ");
-            String method = requestLine[0];
+//            String method = requestLine[0];
             String path = requestLine[1];
-            String version = requestLine[2];
-            String host = requestsLines[1].split(" ")[1];
+//            String version = requestLine[2];
+//            String host = requestsLines[1].split(" ")[1];
 
 
-            Path htmlPath = myServer.getFilePath("src/main/java/myFiles/index.html");
-            Path jsonPath = myServer.getFilePath("src/main/java/myFiles/users.json");
-            Path errorPath = myServer.getFilePath("src/main/java/myFiles/error.html");
+            Path htmlPath = myServer.getFilePath("src/main/resources/index.html");
+            Path jsonPath = myServer.getFilePath("src/main/resources/users.json");
+            Path errorPath = myServer.getFilePath("src/main/resources/error.html");
             if (path.equals("/") && Files.exists(htmlPath)) {
-                String contentType = myServer.guessContentType(htmlPath);
+                String contentType = myServer.getContentType(htmlPath);
                 myServer.sendResponse(mySocket, "200 OK", contentType, Files.readAllBytes(htmlPath));
             } else if (path.equals("/json") && Files.exists(jsonPath)) {
-                String contentType = myServer.guessContentType(jsonPath);
+                String contentType = myServer.getContentType(jsonPath);
                 myServer.sendResponse(mySocket, "200 OK", contentType, Files.readAllBytes(jsonPath));
             } else {
-                String contentType = myServer.guessContentType(errorPath);
+                String contentType = myServer.getContentType(errorPath);
                 myServer.sendResponse(mySocket, "200 OK", contentType, Files.readAllBytes(errorPath));
             }
             System.out.println(requestBuilder.toString());

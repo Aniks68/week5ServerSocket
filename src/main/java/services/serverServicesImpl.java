@@ -31,7 +31,7 @@ public class serverServicesImpl implements serverServices {
     }
 
     @Override
-    public String guessContentType(Path filePath) throws IOException {
+    public String getContentType(Path filePath) throws IOException {
         return Files.probeContentType(filePath);
     }
 }

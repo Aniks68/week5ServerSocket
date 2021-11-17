@@ -7,5 +7,5 @@ import java.nio.file.Path;
 public interface serverServices {
     void sendResponse(Socket client, String status, String contentType, byte[] content) throws IOException;
     Path getFilePath(String path);
-    String guessContentType(Path filePath) throws IOException;
+    String getContentType(Path filePath) throws IOException;
 }
