@@ -23,7 +23,7 @@ class serverServicesImplTest {
 
     @BeforeEach
     void setUp() throws IOException {
-        server = new ServerSocket(6550);
+        server = new ServerSocket(6560);
         clientSocket = server.accept();
         reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
         requestBuilder = new StringBuilder();
@@ -51,7 +51,7 @@ class serverServicesImplTest {
 
     @Test
     @DisplayName("To check for the content type of the filepath")
-    void ShouldTestTheContentType() throws IOException {
+    void contentTypeTest() throws IOException {
         final String expectedResult = "text/html";
         final String actualResult = Files.probeContentType(Path.of("src/main/resources/index.html"));
 

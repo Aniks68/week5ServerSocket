@@ -11,7 +11,7 @@ import java.nio.file.Path;
 public class Server {
     public static void main(String[] args) throws IOException {
         serverServicesImpl myServer = new serverServicesImpl();
-        int port = 6560;
+        int port = 6550;
         ServerSocket server = new ServerSocket(port);
 
         while(server != null) {
